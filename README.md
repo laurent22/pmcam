@@ -1,6 +1,6 @@
 # pmcam - poor man's video capture with motion detection in Bash
 
-This simple Bash script captures images from a webcam with motion detection support. I wanted to find out what my dog was up to when I'm not at home, but couldn't find any free video capture software on OS X. I put together this quick and dirty solution, which does the job surprisingly well.
+This simple Bash script captures images from a webcam with motion detection support. I wanted to find out what my dog was up to when I am not at home, but could not find any free video capture software on OS X. I put together this quick and dirty solution, which does the job surprisingly well.
 
 Frames are captured at regular intervals using `ffmpeg`. Then ImageMagick's `compare` tool is used to check if this frame is similar to the previous one. If the frames are different enough, they are kept, otherwise they are deleted. This provide very simple motion detection and avoids filling up the hard drive with duplicate frames.
 
