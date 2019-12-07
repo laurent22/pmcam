@@ -29,7 +29,7 @@ while true ; do
 		$FFMPEG -loglevel fatal -f video4linux2 -i /dev/video0 -r 1 -t 0.0001 $FILENAME
 	elif [[ "$OSTYPE" == "darwin"* ]]; then
 		# Mac OSX
-		$FFMPEG -loglevel fatal -f avfoundation -i "" -r 1 -t 0.0001 $FILENAME
+		$FFMPEG -loglevel fatal -f avfoundation -i "default" -r 1 -t 0.0001 $FILENAME
 	fi
 	
 	if [[ "$PREVIOUS_FILENAME" != "" ]]; then
